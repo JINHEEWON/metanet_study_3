@@ -194,7 +194,7 @@
       </div>
     </div>
     <%--게시판--%>
-      <table class="table">
+      <table class="table" style="margin-top: 100px">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -209,7 +209,8 @@
               <th scope="row">
                 <%=i%>
               </th>
-              <td>Mark</td>
+              <td>Mark<%=i%>
+              </td>
               <td>Otto</td>
               <td>@mdo</td>
             </tr>
