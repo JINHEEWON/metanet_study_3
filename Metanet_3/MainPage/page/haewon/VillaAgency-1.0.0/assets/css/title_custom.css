@@ -1,0 +1,27 @@
+
+  .custom-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .custom-tooltip .tooltip-content {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* 툴팁의 위치 조절 */
+    left: 50%;
+    margin-left: -60px; /* 툴팁의 가로 길이의 절반만큼 왼쪽으로 이동하여 가운데 정렬 */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .custom-tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+  }
