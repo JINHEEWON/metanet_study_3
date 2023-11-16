@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>윤장원</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d21c35d3de.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: #c7b19a;
+        color: #7d7062;
+        font-size: large;
+      }
+
+      #top {
+        color: #8d7052;
+      }
+
+      .fakeimg {
+        height: 200px;
+        margin-bottom: 20px;
+      }
+
+      .carousel-item {
+        aspect-ratio: 16 / 9;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        height: 50px;
+        padding: 0;
+        text-align: center;
+      }
+
+      h5 {
+        margin: auto;
+        font-size: smaller;
+      }
+
+      #myinfo div,
+      #myinfo li {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #deccb9;
+        color: #7d7062;
+        font-size: large;
+      }
+
+      #mbti div,
+      #mbti p,
+      #goal div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #deccb9;
+        color: #7d7062;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      a {
+        color: #58514a;
+        font-weight: bold;
+      }
+
+      .nav-link:hover {
+        color: #27231e;
+      }
+
+      .nav-link:visited {
+        color: #58514a;
+        font-weight: bold;
+      }
+
+      .title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .email {
+        font-weight: bold;
+      }
+
+      #side {
+        padding-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../main_page.html">3조</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../board.html"
+                  >게시판</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--Login-->
+          <div class="w3-container">
+            <button
+              style="float: right"
+              onclick="document.getElementById('id01').style.display='block'"
+              class="w3-button w3-large"
+            >
+              Login
+            </button>
+            <button
+              style="float: right"
+              onclick="document.getElementById('id02').style.display='block'"
+              class="w3-button w3-large"
+            >
+              Register
+            </button>
+
+            <div id="id01" class="w3-modal">
+              <div
+                class="w3-modal-content w3-card-4 w3-animate-zoom"
+                style="max-width: 600px"
+              >
+                <div class="w3-center">
+                  <br />
+                  <span
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-xlarge w3-transparent w3-display-topright"
+                    title="Close Modal"
+                    >×</span
+                  >
+                  <img
+                    src="img_avatar4.png"
+                    alt="Avatar"
+                    style="width: 30%"
+                    class="w3-circle w3-margin-top"
+                  />
+                </div>
+
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section">
+                    <label><b>Username</b></label>
+                    <input
+                      class="w3-input w3-border w3-margin-bottom"
+                      type="text"
+                      placeholder="Enter Username"
+                      name="usrname"
+                      required
+                    />
+                    <label><b>Password</b></label>
+                    <input
+                      class="w3-input w3-border"
+                      type="text"
+                      placeholder="Enter Password"
+                      name="psw"
+                      required
+                    />
+                    <button
+                      class="w3-button w3-block w3-section w3-padding"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                    <input
+                      class="w3-check w3-margin-top"
+                      type="checkbox"
+                      checked="checked"
+                    />
+                    Remember me
+                  </div>
+                </form>
+
+                <div
+                  class="w3-container w3-border-top w3-padding-16 w3-light-grey"
+                >
+                  <button
+                    onclick="document.getElementById('id01').style.display='none'"
+                    type="button"
+                    class="w3-button"
+                  >
+                    Cancel
+                  </button>
+                  <span class="w3-right w3-padding w3-hide-small"
+                    >Forgot <a href="#">password?</a></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Register-->
+          <div class="w3-container">
+            <div id="id02" class="w3-modal">
+              <div
+                class="w3-modal-content w3-card-4 w3-animate-zoom"
+                style="max-width: 600px"
+              >
+                <div class="w3-center">
+                  <br />
+                  <span
+                    onclick="document.getElementById('id02').style.display='none'"
+                    class="w3-button w3-xlarge w3-transparent w3-display-topright"
+                    title="Close Modal"
+                    >×</span
+                  >
+                  <img
+                    src="img_avatar4.png"
+                    alt="Avatar"
+                    style="width: 30%"
+                    class="w3-circle w3-margin-top"
+                  />
+                </div>
+
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section">
+                    <label><b>Username</b></label>
+                    <input
+                      class="w3-input w3-border w3-margin-bottom"
+                      type="text"
+                      placeholder="Enter Username"
+                      name="usrname"
+                      required
+                    />
+                    <label><b>Password</b></label>
+                    <input
+                      class="w3-input w3-border w3-margin-bottom"
+                      type="text"
+                      placeholder="Enter Password"
+                      name="psw"
+                      required
+                    />
+                    <label><b>Password check</b></label>
+                    <input
+                      class="w3-input w3-border"
+                      type="text"
+                      placeholder="Enter Password"
+                      name="psw"
+                      required
+                    />
+                    <button
+                      class="w3-button w3-block w3-section w3-padding"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="p-5 text-center" id="top">
+      <h1></h1>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-3 order-1" id="side">
+          <div class="myimage">
+            <img
+              class="fakeimg"
+              src="https://github.com/yjjjwww/introduce/assets/100079037/570e4a18-625a-4b55-b1ea-e88b6a1afece"
+              alt="My Image"
+            />
+          </div>
+          <div class="email">
+            <i class="fa-lg fa-solid fa-envelope"></i>
+            yjjjwww@naver.com
+          </div>
+          <h3 class="mt-4">Links</h3>
+          <p>Like & Follow</p>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://velog.io/@yjjjwww"
+                target="_blank"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/yjjjwww"
+                target="_blank"
+                >Github</a
+              >
+            </li>
+          </ul>
+          <hr class="d-sm-none" />
+        </div>
+        <div class="col-sm-9 order-0">
+          <h2 class="title">About Me</h2>
+          <div class="container" id="aboutme">
+            <div class="row">
+              <div class="col-sm infocard">
+                <div class="card text-center" style="height: 20rem" id="myinfo">
+                  <div class="card-header" style="height: 5rem">윤장원</div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="height: 5rem">
+                      생년월일 : 1995.10.18
+                    </li>
+                    <li class="list-group-item" style="height: 5rem">
+                      거주지 : 안양시(평촌)
+                    </li>
+                    <li class="list-group-item" style="height: 5rem">
+                      전공 : 화공생물공학과
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm infocard">
+                <div class="card text-center" style="height: 20rem" id="mbti">
+                  <div class="card-header">MBTI</div>
+                  <div style="background-color: #deccb9">
+                    <img
+                      class="card-img-top"
+                      src="https://github.com/yjjjwww/introduce/assets/100079037/d3929db9-feb7-4ddc-a0f7-781a877a0ceb"
+                      alt="Card image cap"
+                      style="height: 15rem; object-fit: contain; width: 100%"
+                    />
+                  </div>
+                  <div class="card-body">INTJ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title">Favorite</h2>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://github.com/yjjjwww/introduce/assets/100079037/4c926517-e3e9-489f-b32a-55dd0f034e31"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://github.com/yjjjwww/introduce/assets/100079037/8b035523-25b3-4b13-9fa0-54c6159a2fd1"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://github.com/JINHEEWON/metanet_study_3/assets/100079037/65be6136-daeb-4d82-ab58-c16607418ae2"
+                  class="d-block w-100 img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <h2 class="title">Goal</h2>
+          <div class="card-group" id="goal">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="https://github.com/yjjjwww/introduce/assets/100079037/2d384230-eca0-4a3f-b82e-9cd9ea1f3814"
+                alt="Card image cap"
+              />
+              <div class="card-body">프로그래밍 마스터</div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="https://github.com/JINHEEWON/metanet_study_3/assets/100079037/6b34cd3d-da05-44b7-a468-8d07c141b041"
+                alt="Card image cap"
+              />
+              <div class="card-body">건강 챙기기</div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="https://github.com/yjjjwww/introduce/assets/100079037/bed20470-af02-4ffe-82e8-fdf1ce6a2775"
+                alt="Card image cap"
+              />
+              <div class="card-body">좋은 동료들과 성장하기</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        출처 : <a href="https://www.w3schools.com/bootstrap5/bootstrap_templates.php" target="_blank">W3Schools</a>
+      </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const content = "Hello, I'm JangWon!!";
+    const text = document.querySelector(".p-5 h1");
+    let textIdx = 0;
+    let typingInterval;
+
+    function typing() {
+      let txt = content[textIdx++];
+      text.innerHTML += txt;
+
+      if (textIdx >= content.length) {
+        clearInterval(typingInterval);
+      }
+    }
+
+    typingInterval = setInterval(typing, 100);
+
+    const myCarouselElement = document.querySelector("#myCarousel");
+
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 2000,
+      touch: false,
+    });
+  </script>
+</html>
