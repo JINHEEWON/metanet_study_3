@@ -11648,7 +11648,7 @@ pre .code {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-height: 100px;
+  min-height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
