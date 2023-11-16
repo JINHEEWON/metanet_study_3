@@ -15,6 +15,23 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+            var scrollAnimation = document.querySelector('.scroll-animation');
+
+            function handleScroll() {
+                var scrollPosition = window.scrollY;
+                var elementPosition = scrollAnimation.offsetTop;
+
+                if (scrollPosition > elementPosition - window.innerHeight + 100) {
+                scrollAnimation.classList.add('show');
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            });
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation
@@ -37,7 +54,7 @@
         <header class="masthead bg-primary text-white text-center" id="profile">
             <div class="container d-flex align-items-center flex-column" style="background-color: #C7B19A;">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <img class="masthead-avatar mb-5 rounded" src="./assets/img/hongseongcheol.jpg" alt="..." />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0" style="color: #fff;">홍성철</h1>
                 <!-- Icon Divider-->
@@ -92,6 +109,14 @@
                 </div>
             </div>
         </section>
+
+        <!-- iphone -->
+        <section class="iphone-image row">
+            <div class="scroll-animation">
+                <img src="https://cdn.newspocket.co.kr/news/photo/202309/1619_6908_5050.png" alt="Scrolling Image" style="width: 100%;">
+            </div>
+        </section>
+
         <!--StikyThings-->
         <!--CopyRight-->
         <section class="copyright-from" style="color: #C7B19A; position: sticky; bottom: 0px;">
