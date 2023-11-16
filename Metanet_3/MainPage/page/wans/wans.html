@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metanet 3조</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: darkgray;
+        }
+
+        h1,
+        h3 {
+            color: bisque;
+        }
+
+        h2 {
+            color: bisque;
+            padding-left: 10%;
+        }
+
+
+        p {
+            color: white;
+        }
+
+        th {
+            color: rgb(78, 76, 76);
+        }
+
+        .table-font {
+            font-size: large;
+        }
+
+        td {
+            color: rgb(77, 76, 76);
+            font-weight: bold;
+        }
+
+        .kor-font {
+            font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 70px;
+            padding-bottom: 50px;
+        }
+
+        .imageGrid {
+            height: 200px;
+        }
+
+        .carousel-inner h2 {
+            color: rgb(77, 76, 76);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../main_page.html">3조</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../board.html">게시판</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Login-->
+                <div class="w3-container">
+                    <button style="float: right;" onclick="document.getElementById('id01').style.display='block'"
+                        class="w3-button w3-large">Login</button>
+                    <button style="float: right;" onclick="document.getElementById('id02').style.display='block'"
+                        class="w3-button w3-large">Register</button>
+
+                    <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                            <div class="w3-center"><br>
+                                <span onclick="document.getElementById('id01').style.display='none'"
+                                    class="w3-button w3-xlarge w3-transparent w3-display-topright"
+                                    title="Close Modal">×</span>
+                                <img src="img_avatar4.png" alt="Avatar" style="width:30%"
+                                    class="w3-circle w3-margin-top">
+                            </div>
+
+                            <form class="w3-container" action="/action_page.php">
+                                <div class="w3-section">
+                                    <label><b>Username</b></label>
+                                    <input class="w3-input w3-border w3-margin-bottom" type="text"
+                                        placeholder="Enter Username" name="usrname" required>
+                                    <label><b>Password</b></label>
+                                    <input class="w3-input w3-border" type="text" placeholder="Enter Password"
+                                        name="psw" required>
+                                    <button class="w3-button w3-block w3-section w3-padding"
+                                        type="submit">Login</button>
+                                    <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+                                </div>
+                            </form>
+
+                            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                                <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                                    class="w3-button">Cancel</button>
+                                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Register-->
+                <div class="w3-container">
+                    <div id="id02" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                            <div class="w3-center"><br>
+                                <span onclick="document.getElementById('id02').style.display='none'"
+                                    class="w3-button w3-xlarge w3-transparent w3-display-topright"
+                                    title="Close Modal">×</span>
+                                <img src="img_avatar4.png" alt="Avatar" style="width:30%"
+                                    class="w3-circle w3-margin-top">
+                            </div>
+
+                            <form class="w3-container" action="/action_page.php">
+                                <div class="w3-section">
+                                    <label><b>Username</b></label>
+                                    <input class="w3-input w3-border w3-margin-bottom" type="text"
+                                        placeholder="Enter Username" name="usrname" required>
+                                    <label><b>Password</b></label>
+                                    <input class="w3-input w3-border w3-margin-bottom" type="text"
+                                        placeholder="Enter Password" name="psw" required>
+                                    <label><b>Password check</b></label>
+                                    <input class="w3-input w3-border" type="text" placeholder="Enter Password"
+                                        name="psw" required>
+                                    <button class="w3-button w3-block w3-section w3-padding"
+                                        type="submit">Register</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        <div>
+            <h1 style="text-align: center;">Hello, I'm WanSeoung!!</h1>
+        </div>
+        <hr>
+        <div class="container text-center">
+
+            <div class="row">
+
+                <div class="col">
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" style="background-color: rgb(185, 184, 184);">
+                            <tbody class="table-font">
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td>김완승</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">생년월일</th>
+                                    <td>1997.10.27</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">거주지</th><br>
+                                    <td>경기도 화성시</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">전공</th><br>
+                                    <td>정보통신공학</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">군대</th><br>
+                                    <td>육군항공 헬기무장정비, 승무원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">취미</th><br>
+                                    <td>산책, 프로그래밍</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- <img src="wans_util\avatar2.jpg" class="img-fluid" alt="..."> -->
+                    <!-- <img src="wans_util\avatar2.jpg" class="img-thumbnail" alt="..."> -->
+                </div>
+
+            </div>
+        </div>
+
+        <br></br>
+
+
+        <div class="container mt-3" style="padding-right: 10%;">
+            <div class="container p-5 my-5 text-white" style="background-color: rgb(77, 76, 76);">
+                <h3 style="font-weight: bolder;">새로운 기술에 대한 도전정신과 활용능력을 지닌 백엔드 개발자 입니다</h3>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut
+                    aliquip ex ea commodo consequat.. </p>
+            </div>
+        </div>
+
+
+        <br>
+
+
+        <div id="carouselExample" class="carousel slide mx-auto" style="height: 110%;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h2>사진1</h2>
+                    <div class="container-sm">
+                        <img src="wans_util\test.png" class="img-thumbnail" alt="..." style="width: 60%;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <h2>거주지: 경기도 화성시 동탄</h2>
+                    <div class="container-sm">
+                        <img src="wans_util\meta.jpg" class="img-thumbnail" alt="..." style="width: 60%;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <h2>취미: 산책, 달리기</h2>
+                    <div class="container-sm">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4112/4112938.png"
+                            class="img-thumbnail imageGrid" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <h2>사진그리들</h2>
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col">
+                                <div class="container-sm">
+                                    <img src="wans_util\meta.jpg" class="img-thumbnail" alt="..." width="400"></img>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="container-sm">
+                                    <img src="wans_util\meta.jpg" class="img-thumbnail" alt="..." width="400"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+
+        <div class="mt-5 p-4 bg-dark text-white text-center">
+            <p>Footer</p>
+        </div>
+</body>
+
+</html>
+<script>
+    function imageGrid() {
+    }
+</script>
