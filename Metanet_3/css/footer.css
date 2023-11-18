@@ -16,6 +16,7 @@ footer.footer-no-gap {
     font-weight: 400;
     /* 추가사항 */
     margin-left: 400px;
+    background-color: #1e1e1e;
   }
   
   footer p a {
