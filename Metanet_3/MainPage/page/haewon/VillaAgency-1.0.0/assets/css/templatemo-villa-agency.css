@@ -907,7 +907,7 @@ Featured Style
 }
 
 .featured .accordion-button:not(.collapsed) {
-  color: #f35525;
+  color: rgb(255, 157, 0);
   background-color: #fafafa;
   outline: none;
 }
@@ -1375,6 +1375,8 @@ footer p {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+  /* 추가사항 */
+  margin-left: 400px;
 }
 
 footer p a {
@@ -1555,7 +1557,7 @@ Single Page Style
 }
 
 .single-property .accordion-button:not(.collapsed) {
-  color: #f35525;
+  color: #f35525; 
   background-color: #fafafa;
   outline: none;
 }
