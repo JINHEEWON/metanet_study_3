@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="C:/Metanet_edu/HTML/VillaAgency-1.0.0/assets/images/bear.ico">
+    <link rel="icon" href="../../../bear.ico" type="image/x-icon">
     <title>안녕하세요, 김혜원입니다!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -20,7 +21,9 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://kit.fontawesome.com/efb2fe2bf7.js" crossorigin="anonymous"></script>
 
@@ -37,8 +40,6 @@ https://templatemo.com/tm-591-villa-agency
 
 <body>
 
-
-  
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -107,6 +108,90 @@ https://templatemo.com/tm-591-villa-agency
   </header>-->
   <!-- ***** Header Area End ***** -->
 
+  
+  <div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="main_page.html">3조</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="board.html">게시판</a>
+            </li>
+          </ul>
+        </div>
+        <!--Login-->
+        <div class="w3-container">
+          <button style="float: right;" onclick="document.getElementById('id01').style.display='block'"
+            class="w3-button w3-large">Login</button>
+          <button style="float: right;" onclick="document.getElementById('id02').style.display='block'"
+            class="w3-button w3-large">Register</button>
+
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+              <div class="w3-center"><br>
+                <span onclick="document.getElementById('id01').style.display='none'"
+                  class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+              </div>
+
+              <form class="w3-container" action="/action_page.php">
+                <div class="w3-section">
+                  <label><b>Username</b></label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username"
+                    name="usrname" required>
+                  <label><b>Password</b></label>
+                  <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+                  <button class="w3-button w3-block w3-section w3-padding" type="submit">Login</button>
+                  <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+                </div>
+              </form>
+
+              <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                  class="w3-button">Cancel</button>
+                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!--Register-->
+        <div class="w3-container">
+          <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+              <div class="w3-center"><br>
+                <span onclick="document.getElementById('id02').style.display='none'"
+                  class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+              </div>
+
+              <form class="w3-container" action="/action_page.php">
+                <div class="w3-section">
+                  <label><b>Username</b></label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username"
+                    name="usrname" required>
+                  <label><b>Password</b></label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Password" name="psw"
+                    required>
+                  <label><b>Password check</b></label>
+                  <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+                  <button class="w3-button w3-block w3-section w3-padding" type="submit">Register</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
   <div class="main-banner">
     <div class="owl-carousel owl-banner">
       <div class="item item-1">
@@ -121,7 +206,7 @@ https://templatemo.com/tm-591-villa-agency
       
       <div class="item item-2"> 
         <div class="header-text">
-          <span class="category">Hyehwa, <em>KOSA</em></span>
+          <span class="category">Hyehwa, <em style="color:#C7B19A;">KOSA</em></span>
           <h2>cute<br>Moment</h2>
         </div>
       </div>
@@ -142,13 +227,13 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-lg-4">
           <div class="left-image">
             <img src="https://github.com/KHaeWon/MetanetJDBCTier/assets/127920368/c1249335-d548-4bc2-9663-a0431ef44f62" alt="">
-            <a href="property-details.html"><img src="assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
+            <!-- <a href="property-details.html"><img src="assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a> -->
           </div>
         </div>
         <div class="col-lg-5">
           <div class="section-heading">
             <h6 style="color: #C7B19A;">| Featured</h6>
-            <h2 style="color: #C7B19A;">한국민속촌</h2>
+            <h2>한국민속촌</h2>
           </div>
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -172,9 +257,9 @@ https://templatemo.com/tm-591-villa-agency
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>공포체험!</strong><br>
-                  <code>귀굴 vs 혈안식귀</code><br>
+                  <code style="font-weight: bold; color: rgb(255, 157, 0);">귀굴 vs 혈안식귀</code><br>
                   <strong>놀이기구!</strong><br>
-                  <code>바이킹 vs 범퍼카</code>
+                  <code style="font-weight: bold; color: rgb(255, 157, 0);">바이킹 vs 범퍼카</code>
                 </div>
               </div>
             </div>
@@ -186,8 +271,7 @@ https://templatemo.com/tm-591-villa-agency
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>제법 재미난디</strong><br>
-                  가봐유들 ㅎ
+                  제법 재미난디 가봐유들 ㅎ
                 </div>
               </div>
             </div>
@@ -204,7 +288,7 @@ https://templatemo.com/tm-591-villa-agency
               <li>
                 <h4><i class="fa-solid fa-hand-peace fa-spin-pulse" style="color: #000000;"></i>
                 <!--<img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">-->
-                CONTENT<br><span>The Haunted Den, Korean Dance etc..</span></h4>
+                CONTENT<br><span>The Haunted Den<br>Korean Dance<br>etc..</span></h4>
               </li>
               <li>
                 <h4><i class="fa-solid fa-sack-dollar fa-spin-pulse" style="color: #000000;"></i>
@@ -227,7 +311,7 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-4 offset-lg-4">
           <div class="section-heading text-center">
-            <h6>| Video View</h6>
+            <h6 style="color: #C7B19A;">| Video View</h6>
             <h2>아이구 구여워</h2>
           </div>
         </div>
@@ -332,12 +416,12 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     
                     <div class="col-lg-3">
-                      <h4>나는!</h4>
-                      <p><ol>누워있는 걸 좋아하고</ol><br>
-                        <ol>맛있는 음식 먹는 게 낙이고</ol><br>
-                        <ol>고양이보단 강아지가 좋고</ol><br>
-                        <ol>국수를 아주 좋아하고</ol><br>
-                        <ol>행복하게 사는 게 꿈입니다</ol></p>
+                      <h4>Favorance</h4>
+                      <p><ol>누워있기</ol><br>
+                        <ol>유튜브 보기</ol><br>
+                        <ol>맛난 음식 먹기</ol><br>
+                        <ol>댕댕이</ol><br>
+                        <ol>그치만 털 알레르기</ol></p>
                       <!--
                       <div class="icon-button">
                         <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule a visit</a>
@@ -417,8 +501,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-lg-4 col-md-6">
           <div class="item">
             <img src="https://github.com/KHaeWon/MetanetWebBasic/assets/127920368/83917c34-9c2e-4d5c-90b3-4cf41c21c4f0" alt=""></a>
-            <span class="category" style="background-color: #C7B19A;">칼국수 맛집</span>
-            <h6>뼈칼국수</h6>
+            <span class="category" style="background-color: papayawhip;">칼국수 맛집</span>
+            <h6 style="color: rgb(255, 157, 0); font-weight: bold;">뼈칼국수</h6>
             <h4>파주뼈칼국수 교하제면소</a></h4>
             <ul>
               <li>경기 파주시 탄현면 평화로 725</li><br>
@@ -436,8 +520,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-lg-4 col-md-6">
           <div class="item">
             <img src="https://github.com/KHaeWon/MetanetWebBasic/assets/127920368/6e8770bd-6cb5-4649-b76e-c371bbc7e20a" alt=""></a>
-            <span class="category">돈까스 맛집</span>
-            <h6>현지인 노포</h6>
+            <span class="category" style="background-color: papayawhip;">돈까스 맛집</span>
+            <h6 style="color: rgb(255, 157, 0); font-weight: bold;">현지인 노포</h6>
             <h4>유키돈까스</a></h4>
             <ul>
               <li>인천 남동구 구월로 125</li><br>
@@ -455,8 +539,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-lg-4 col-md-6">
           <div class="item">
             <img src="https://github.com/KHaeWon/MetanetWebBasic/assets/127920368/da9d1d2c-bdf2-4138-aa15-127a9df78c33" alt=""></a>
-            <span class="category">만두 맛집</span>
-            <h6>만둣국 GOAT</h6>
+            <span class="category" style="background-color: papayawhip;">만두 맛집</span>
+            <h6 style="color: rgb(255, 157, 0); font-weight: bold;">만둣국 GOAT</h6>
             <h4>평양손만두</a></h4>
             <ul>
               <li>경기 파주시 와석순환로 507 월드타워9차 2층</li><br>
@@ -603,15 +687,17 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div> -->
 
-  <!-- <footer>
+ <footer>
     <div class="container">
       <div class="col-lg-8">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
+        <p>
+          <img src="https://github.com/KHaeWon/MetanetWebBasic/assets/127920368/3f116929-548d-4b7a-a3e2-a729884e6f91" style="width: 30px; height: auto;">
+          <span href="/Metanet_3/MainPage/main_page.html" style="color: papayawhip;">3조</span>   |    김완승    |    김혜원    |    윤장원    |    진희원    |    홍성철           
+          <br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+        </p>
       </div>
     </div>
-  </footer> -->
+  </footer> 
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
